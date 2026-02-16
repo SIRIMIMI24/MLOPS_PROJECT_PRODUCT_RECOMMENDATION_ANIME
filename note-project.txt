@@ -1,0 +1,21 @@
+1. Create venv -> python -m venv venv
+2. activate venv -> venv\Scripts\activate
+3. instaill libraries -> pip install -e .
+4. Create src
+   - Create data_ingestion.py
+   - Create data_exception.py
+   - Create data_processing.py
+   - Create base_model.py
+5. Create config
+6. Create pipline
+7. Create utils
+8. Create templates
+9. Create static
+10. Run model_training.py --> python -m src.model_training
+
+
+
+--- use linux gpu
+1. Ubuntu
+2. cd /mnt/c/Users/SIRIDACH\ JAROENSIRI/Desktop/MLOS-PRODUCT-RECOMMENDATION-ANIME
+3. source tf_gpu_env/bin/activate

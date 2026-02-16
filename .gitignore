@@ -1,0 +1,23 @@
+venv/
+artifacts/raw/
+artifacts/processed/
+artifacts/model/
+artifacts/weights/
+artifacts/model_checkpoint/
+MLOPS_PROJECT_PRODUCT_RECOMMENDATION_ANIME.egg-info/
+tf_gpu_env/
+notebook/weights.weights.h5
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
