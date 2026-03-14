@@ -13,8 +13,50 @@
 9. Create static
 10. Run model_training.py --> python -m src.model_training
 
+After Creating Dockerfile ----> Open Vs Code Terminal in CMD ----> cd custom_jenkins
+
+After this usr following commands one by one:
+
+docker build -t jenkins-dind .
+docker images
+
+docker run -d ^
+--name jenkins-dind ^
+--privileged ^
+-p 8080:8080 ^
+-p 50000:50000 ^
+-v //var/run/docker.sock:/var/run/docker.sock ^
+-v jenkins_home:/var/jenkins_home ^
+jenkins-dind
 
 
+------ You will get some alphanumeric if code run is sucessfull....
+
+docker ps
+docker logs jenkins-dind
+
+
+------ This will give you a password for Jenkins Installation ---> Copy that password
+
+GO to browser--> localhost:8080 ---> Paste that password --> Install suggested plugins and create your user...
+
+AGAIN COME TO TERMINAL ( custom jenkins terminal ) : Write following commands -->
+
+docker exec -u root -it jenkins-dind bash
+apt update -y
+apt install -y python3
+python3 --version
+ln -s /usr/bin/python3 /usr/bin/python
+python --version
+apt install -y python3-pip
+apt install -y python3-venv
+exit
+
+docker restart jenkins-dind
+
+GO TO JENKINS DASHBOARD AND SIGN IN AGAIN----->
+
+Don't run jenkins ****
 --- use linux gpu
 1. Ubuntu
 2. cd /mnt/c/Users/SIRIDACH\ JAROENSIRI/Desktop/MLOS-PRODUCT-RECOMMENDATION-ANIME
